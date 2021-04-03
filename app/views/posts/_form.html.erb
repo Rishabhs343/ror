@@ -1,0 +1,39 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field commentstyle">
+    <strong><%= form.label :image %></strong>
+    
+    <%= form.file_field :image,:size=>'100%' , :required => true %>
+  </div>
+
+  <div class="field commentstyle">
+    <strong><%= form.label :title %></strong>
+    
+    <%= form.text_field :title,:size=>'100%' , :required => true %>
+  </div>
+
+  <div class="field commentstyle">
+    <strong><%= form.label :description %></strong>
+    <%= form.text_area :description,:size=>'100%' , :required => true %>
+  </div>
+
+  <div class="field commentstyle">
+    <strong><%= form.label :body %></strong>
+    <%= form.text_area :body,:size=>'100%x20%' , :required => true %>
+  </div>
+
+  <div class="actions commentstyle">
+    <%= form.submit %>
+  </div>
+<% end %>

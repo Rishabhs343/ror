@@ -1,0 +1,56 @@
+<br/>
+<%= image_tag(@post.image)%>
+
+
+
+<p class='overflow'>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p class='overflow'>
+  <strong>Description:</strong>
+  <%= @post.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @post.user.username %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= markdown @post.body %>
+</p>
+
+<% if user_signed_in? %>
+  <p class="commentstyle">
+    <%= link_to 'Edit', edit_post_path(@post),class: "btn btn-outline-primary" %>
+  </p>
+<% end %>
+<br/>
+<br/>
+<h2><%= @post.comments.count %> Comments</h2>
+<br/>
+<%= render @post.comments %>
+<br/>
+<h3 class="commentstyle">Add a Comments</h3>
+<%= render 'comments/form' %>
+<br/>
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

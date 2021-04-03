@@ -1,0 +1,21 @@
+<%= form_for([@post,@post.comments.build]) do |f| %>
+    <p class="commentstyle">
+        <%= f.label :name, "Name" %>
+        <% if user_signed_in? %>
+            <%= f.text_field :name ,:size=>'100' ,:value => "#{current_user.username}", :disabled => true%>
+        <% else %>
+            <%= f.text_field :name ,:size=>'100', :required => true %>
+        <% end %>
+        
+    </p>
+    <p class="commentstyle">
+        <%= f.label :body, "Body" %>
+        <%= f.text_area :body ,:size=>"100" , :required => true%>
+
+    </p>
+    <br/>
+    <p class="commentstyle">
+        <%= f.submit "Submit", disable_with: 'Submiting...',class: "btn btn-outline-primary" %>
+    </p>
+
+<% end %>

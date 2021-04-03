@@ -1,0 +1,312 @@
+/* Global Classes */
+
+.title-text {
+    font: normal bold 50px/ 72px var(--roboto);
+  }
+  
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+  
+html,
+body {
+  margin: 0%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+/* CSS Variables */
+
+:root {
+  --primary-color: #4458dc;
+  --primary-color2: #854fee;
+  --title-color: #141313;
+  --text-color: #777777;
+  --border-color: #201f1f17;
+  --gradient-color: linear-gradient(90deg, #3d72f8 0%, #3d85f0 100%);
+  --hover-gradient-color: linear-gradient(90deg, #fa5b33 0%, #f03d3d 100%);
+  --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+
+  /* font family variables. */
+  --roboto: "Roboto", "Times New Roman", Times, serif;
+}
+/* font-face */
+@font-face {
+    font-family: "Roboto";
+    src: "../fonts/Roboto/Roboto-Regular.ttf";
+  }
+  
+/* line 1, app/assets/stylesheets/scaffolds.scss */
+pre {
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 5, app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: red;
+}
+
+/* line 8, app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 11, app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 14, app/assets/stylesheets/scaffolds.scss */
+div.field,
+div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 18, app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 21, app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 26, app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+/* line 33, app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+/* line 42, app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 46, app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* import fonts from fonts.css */
+@import url(./partials/fonts.css);
+
+/* css variables */
+@import url(./partials/_variables.css);
+
+/* global file */
+@import url(./partials/_global.css);
+
+/* Start navigation */
+body {
+  font-family: var(--roboto); 
+}
+
+.header_area .main-menu .navbar .navbar-brand {
+  padding: 0 2rem 0 2rem;
+}
+
+.header_area .main-menu .navbar {
+  padding: 1rem;
+  padding-right: 4rem;
+}
+
+.header_area .main-menu .nav-item .nav-link {
+  font: normal 500 17px/4px var(--roboto);
+  text-transform: uppercase;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  color: var(--title-color);
+}
+
+.header_area .main-menu .navbar-nav a.active {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header_area .main-menu .navbar-nav a:hover {
+  background: var(--hover-gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.search-box
+{
+    display: inline-flex;
+    width:713px !important;
+}
+
+.search{
+  margin-left: 45px;
+}
+.form-control
+{
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  border: 1px solid #0078ff !important;
+  border-top-left-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important; 
+  box-shadow: none !important;
+    
+}
+
+.navbar-nav li{
+  margin-left: 50px;
+}
+
+/* End navigation */
+
+ /* Footer Area*/
+.footer-area {
+  position:-webkit-sticky;
+  /* text-align: center; */
+    /* height: 50px;   */
+    bottom:0;
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: #ffffff;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    width:100%;
+   /* height:60px;  */
+  }
+  
+  #lab_social_icon_footer {
+    padding: 10px 0;
+    background-color: #ffffff;
+    align-items: center;
+  }
+  
+  #lab_social_icon_footer a {
+    color: #333;
+  }
+  
+  #lab_social_icon_footer .social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+  
+  #lab_social_icon_footer .social {
+    -webkit-transform: scale(0.8);
+    padding-left: 3rem;
+    /* Browser Variations: */
+  
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+  }
+  /*
+      Multicoloured Hover Variations
+  */
+  
+  #lab_social_icon_footer #social-github:hover {
+    color: red;
+  }
+  
+  #lab_social_icon_footer #social-gitlab:hover {
+    color: #fc6d26;
+  }
+  
+  #lab_social_icon_footer #social-linkedin:hover {
+    color: #0e76a8;
+  }
+  
+  #lab_social_icon_footer #social-gmail:hover {
+    color: #08851b;
+  }
+  
+  #lab_social_icon_footer #social-office:hover {
+    color: #3e65cf;
+  }
+  
+  .designby {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: auto;
+  }
+
+  .site-footer {
+    height: 142px; 
+  }
+
+
+  td
+  {
+   max-width: 100px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+  }
+
+  .newjumbo{
+    padding: 10px;
+  }
+  
+  .commentstyle{
+    text-align: center;
+  }
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 70px;
+    padding: 20px;
+
+  }
+
+  .wrapper{
+    background-color: #f4f4f4;
+
+    
+  }
+    #latest article .excerpt .meta{}
+    #latest article .excerpt .meta li{display:inline-block; font-size:.8rem;}
+    #latest article .excerpt .meta li::after{margin-left:5px; content:"|";}
+    #latest article .excerpt .meta li:last-child::after{margin:0; content:"";}

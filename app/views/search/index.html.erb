@@ -1,0 +1,47 @@
+<h1>All Posts</h1>
+<!-- <p>Find me in app/views/home/index.html.erb</p> -->
+<div class="container">
+  <table id="myTable" class="table table-striped" >  
+  <ul class="row">
+    <% @posts.each do |post| %>
+      <li class="column">
+        <div class="gallery">
+          <a>
+            <%= link_to post do %>
+              <%= image_tag(post.image, :size => '300x300') %>
+
+              <div class="excerpt desc">
+                <strong><h3 class="heading overflow"><%= post.title %></h3></strong>
+                <p><i class="fas fa-user">  </i> <%= post.user.username %></p>
+                <p class="timeesize"><%= time_ago_in_words(post.created_at) %> ago</p>
+                <p class='overflow'><%= post.description %></p>
+              </div>
+            </div>
+            <% end %>
+          </a>
+      </li>
+    <% end %>
+  </ul>
+</table>  
+</div>
+
+<br/>
+
+<div>
+  <% if user_signed_in? %>
+    <%= link_to 'New Post', new_post_path, class:"btn btn-secondary" %>
+  <% end %>
+</div>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<!-- <% if current_user.nil? %>
+  <%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
+<% else %>
+  <%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
+<% end %> -->
